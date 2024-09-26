@@ -1,0 +1,128 @@
+Sl. No Field Name Field Type Example
+1 property_id string “Bayut - 2335-Th-R-0039”
+2 property_url string “https://www.bayut.com/property/details-5118159.html”
+2 purpose string “For Rent”
+3 type string “Townhouse”
+
+4 added_on string “22 April 2021”
+5 furnishing string “Unfurnished”
+
+6 price dict {"currency": "AED",
+"amount": "99,999"}
+
+7 location string “Phase 2, Al Furjan, Dubai”
+8 bed_bath_size dict
+
+{"bedrooms": 4,
+"bathrooms": 6,
+"size": "3,100 sqft"}
+9 permit_number string “6511742172”
+10 agent_name string “Jahangir Ali”
+11 primary_image_
+url string "https://images.bayut.com/thumbnails/104428356-400x300.jpeg"
+12 breadcrumbs string "Townhouses for Rent in Dubai > Al Furjan > Phase 2
+
+Townhouses"
+
+13 amenities list
+
+["Balcony or Terrace", "Maids Room", "Centrally Air-Conditioned",
+"Storage Areas", "Study Room", "Kids Play Area", "Lawn or
+Garden", "Cafeteria or Canteen", "Conference Room"]
+
+14 description string
+
+"On Off Properties proud to offer you this amazing Huge size 4
+bedrooms villa in phase 2 Al Furjan. All Bedrooms with Attached
+Baths Very near to Furjan Pavilion Phase 2 Villas Description All
+Bedroom with Attached Bath & Terrace One Bedroom on ground
+floor Fully Closed Kitchen Maids Room with Ensuite bathroom
+Laundry room Backyard Garden BUA 3100 sqft About the
+Location: - 10 mins to Ibne Battuta Mall - Easy access road to
+Sheikh Mohd Bin Zayed & Sheikh Zayed Road - Nearby Petrol
+Station And Super Markets Al Furjan is a vibrant residential
+development located between Sheikh Zayed Road and
+Mohammed Bin Zayed Road, adjacent to the Discovery Gardens
+community, conveniently close to Ibn Battuta Mall & with easy
+access back towards the Dubai Marina and other nearby
+prominent developments and is accessible from Al Yalayis Street
+and Al Asayel Street. We can also do online viewing by webcam
+in case youre overseas or youre following Stay home during this
+special period. For Viewing & Info Syed Jahangir"
+
+15 property_image
+_urls list
+
+['https://images.bayut.com/thumbnails/104426293-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104423381-800x600.jpeg',
+'https://images.bayut.com/thumbnails/103829232-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104508405-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104152984-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104428356-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104426294-800x600.jpeg',
+'https://images.bayut.com/thumbnails/103829233-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104508409-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104152988-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104423393-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104428359-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104423404-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104426296-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104508414-800x600.jpeg',
+'https://images.bayut.com/thumbnails/103829234-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104428362-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104152991-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104426298-800x600.jpeg',
+'https://images.bayut.com/thumbnails/103829235-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104428365-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104423417-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104508419-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104152995-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104508422-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104428371-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104423427-800x600.jpeg',
+'https://images.bayut.com/thumbnails/103829236-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104153012-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104426300-800x600.jpeg',
+'https://images.bayut.com/thumbnails/103829237-800x600.jpeg',
+
+'https://images.bayut.com/thumbnails/104423437-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104426302-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104428380-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104153015-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104508426-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104423447-800x600.jpeg',
+'https://images.bayut.com/thumbnails/103829238-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104508430-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104426304-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104428382-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104153023-800x600.jpeg',
+'https://images.bayut.com/thumbnails/103829239-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104153026-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104423456-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104426306-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104508434-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104428384-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104423474-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104428387-800x600.jpeg',
+'https://images.bayut.com/thumbnails/103829240-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104426307-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104153029-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104508439-800x600.jpeg',
+'https://images.bayut.com/thumbnails/103829241-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104508442-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104423507-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104426310-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104428389-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104153032-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104423519-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104428391-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104426312-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104153034-800x600.jpeg',
+'https://images.bayut.com/thumbnails/103829242-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104508445-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104423527-800x600.jpeg',
+'https://images.bayut.com/thumbnails/103829243-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104153037-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104426314-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104508449-800x600.jpeg',
+'https://images.bayut.com/thumbnails/104428393-800x600.jpeg']
