@@ -1,0 +1,129 @@
+pip install scrapy
+scrapy startproject bayut_scraper
+cd bayut_scraper
+scrapy genspider bayut_spider bayut.com
+import scrapy
+
+class BayutSpider(scrapy.Spider):
+    name = 'bayut_spider'
+    start_urls = ['https://www.bayut.com/to-rent/property/dubai/']
+
+    def parse(self, response):
+        # Follow pagination links
+        next_page = response.css('a[title="Next"]::attr(href)').get()
+        if next_page:
+            yield response.follow(next_page, self.parse)
+
+        # Extract product/property links
+        property_links = response.css('a[itemprop="url"]::attr(href)').getall()
+        for link in property_links:
+            yield response.follow(link, self.parse_property)
+
+    def parse_property(self, response):
+        # Property parsing logic goes here
+        pass
+def parse_property(self, response):
+    yield {
+        'title': response.xpath('//h1/text()').get(),
+        'price': response.xpath('//span[contains(@aria-label, "price")]/text()').get(),
+        'bedrooms': response.xpath('//span[contains(@aria-label, "beds")]/text()').get(),
+        'bathrooms': response.xpath('//span[contains(@aria-label, "baths")]/text()').get(),
+        'area': response.xpath('//span[contains(@aria-label, "area")]/text()').get(),
+        'location': response.css('.property-location__text::text').get(),
+        'agent_name': response.css('.agent-info__name a::text').get(),
+        'agent_phone': response.css('.phone-info__contact span::text').get(),
+    }
+def clean_price(price):
+    return price.replace('AED', '').strip() if price else None
+FEEDS = {
+    'properties.json': {
+        'format': 'json',
+        'encoding': 'utf8',
+        'indent': 4,
+    },
+    'properties.csv': {
+        'format': 'csv',
+        'fields': ['title', 'price', 'bedrooms', 'bathrooms', 'area', 'location', 'agent_name', 'agent_phone'],
+    }
+}
+import sqlite3
+
+class SQLitePipeline:
+
+    def open_spider(self, spider):
+        self.connection = sqlite3.connect("bayut_properties.db")
+        self.cursor = self.connection.cursor()
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS properties (
+                title TEXT,
+                price TEXT,
+                bedrooms TEXT,
+                bathrooms TEXT,
+                area TEXT,
+                location TEXT,
+                agent_name TEXT,
+                agent_phone TEXT
+            )
+        ''')
+        self.connection.commit()
+
+    def close_spider(self, spider):
+        self.connection.close()
+
+    def process_item(self, item, spider):
+        self.cursor.execute('''
+            INSERT INTO properties (title, price, bedrooms, bathrooms, area, location, agent_name, agent_phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (
+            item.get('title'),
+            item.get('price'),
+            item.get('bedrooms'),
+            item.get('bathrooms'),
+            item.get('area'),
+            item.get('location'),
+            item.get('agent_name'),
+            item.get('agent_phone'),
+        ))
+        self.connection.commit()
+        return item
+import sqlite3
+
+class SQLitePipeline:
+
+    def open_spider(self, spider):
+        self.connection = sqlite3.connect("bayut_properties.db")
+        self.cursor = self.connection.cursor()
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS properties (
+                title TEXT,
+                price TEXT,
+                bedrooms TEXT,
+                bathrooms TEXT,
+                area TEXT,
+                location TEXT,
+                agent_name TEXT,
+                agent_phone TEXT
+            )
+        ''')
+        self.connection.commit()
+
+    def close_spider(self, spider):
+        self.connection.close()
+
+    def process_item(self, item, spider):
+        self.cursor.execute('''
+            INSERT INTO properties (title, price, bedrooms, bathrooms, area, location, agent_name, agent_phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (
+            item.get('title'),
+            item.get('price'),
+            item.get('bedrooms'),
+            item.get('bathrooms'),
+            item.get('area'),
+            item.get('location'),
+            item.get('agent_name'),
+            item.get('agent_phone'),
+        ))
+        self.connection.commit()
+        return item
+ITEM_PIPELINES = {
+   'bayut_scraper.pipelines.SQLitePipeline': 300,
+}
